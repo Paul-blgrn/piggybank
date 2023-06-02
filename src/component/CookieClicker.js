@@ -4,22 +4,11 @@ import { addItem, deleteItem, resetItem } from "../actions/CookieClickerAction";
 
 import cookie from '../cookie.png';
 
-const Cart = () => {
+const CookieClicker = () => {
   const state = useSelector((state) => state);
   const dispatch = useDispatch();
   const [shake, setShake] = useState(false);
-  const [isStart, setIsStart] = useState(false);
-
-  /* useEffect(() => {
-    const handleContextmenu = e => {
-      e.preventDefault();
-      //dispatch(deleteItem());
-    }
-    document.addEventListener('contextmenu', handleContextmenu)
-    return function cleanup() {
-        document.removeEventListener('contextmenu', handleContextmenu)
-    }
-  }, []) */
+  const [rShake, setRShake] = useState(false);
 
   const clickCookie = () => {
       // Button begins to shake
@@ -35,25 +24,31 @@ const Cart = () => {
   const rightClickCookie = () => {
     if (state.numOfItems > 0) {
       // Button begins to shake
-      setShake(true);
+      setRShake(true);
       
       // decrement number of items by 1
       dispatch(deleteItem());
       
       // Buttons stops to shake
-      setTimeout(() => setShake(false), 100);
+      setTimeout(() => setRShake(false), 100);
     }
   }
 
   return (
     <div className="cart">
+
       <h3>Cookie Clicker</h3>
+
+      {/* COOKIE CLICKER */}
       <div className="cookie-clicker">
+        {/* COOKIE IMAGE */}
         <img 
           src={cookie} 
-          className = {shake ? `shake` : `cookie-img`} 
+          className = {shake === true ? `shake` : rShake === true ? `shake-reverse` : `cookie-img`} 
           alt="cookie clicker" 
         />
+
+        {/* COUNTER */}
         <div 
           className="cookie-clicker-counter" 
           onClick = {clickCookie} 
@@ -65,6 +60,8 @@ const Cart = () => {
           {state.numOfItems}
         </div>
       </div>
+
+      {/* RESET BUTTON */}
       <button className="cart-red"
         disabled={state.numOfItems > 0 ? false : true}
         onClick={() => {
@@ -77,4 +74,4 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+export default CookieClicker;
