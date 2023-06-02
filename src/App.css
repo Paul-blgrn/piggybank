@@ -9,7 +9,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-scale infinite 1.5s ease-in-out alternate;
   }
 }
 
@@ -28,11 +28,44 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+@keyframes App-logo-scale {
   from {
-    transform: rotate(0deg);
+    /* transform: rotate(0deg); */
+    transform: scale(0.8);
   }
   to {
-    transform: rotate(360deg);
+    /* transform: rotate(360deg); */
+    transform: scale(1);
   }
+}
+
+button {
+  margin: 10px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  color: #fff;
+  padding: 23px 50px;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  border: 0px;
+  cursor: pointer;
+}
+.green {
+  background-color: rgb(6, 172, 0);
+}
+.red {
+  background-color: rgb(221, 52, 66);
+}
+.red:disabled {
+  background-color: rgb(193, 191, 191);
+  cursor: not-allowed;
+}
+.cart {
+  text-align: center;
+}
+
+hr {
+  width: 40rem;
 }
