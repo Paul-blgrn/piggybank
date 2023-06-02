@@ -37,7 +37,9 @@ const CookieClicker = () => {
   return (
     <div className="cart">
 
-      <h3>Cookie Clicker</h3>
+    <p>
+      Ou <br/>Cliquez sur ce magnifique <strong>Cookie</strong>
+    </p>
 
       {/* COOKIE CLICKER */}
       <div className="cookie-clicker">

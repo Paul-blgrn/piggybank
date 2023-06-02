@@ -64,10 +64,13 @@ hr {
 /* ------------------ */
 /* - Cookie Clicker - */
 /* ------------------ */
-
 .cart {
   text-align: center;
   margin-top: -3rem;
+}
+
+.cart p {
+  font-size: 1.7rem;
 }
 
 .cart-green {
@@ -97,11 +100,10 @@ hr {
   top: 0;
   left: 0;
   height: 30vmin;
-  width: 30vmin;
+  width: 42.8vmin;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  text-align: center;
   font-weight: bolder;
   user-select: none;
 }

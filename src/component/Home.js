@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import logo from '../piggybank.svg';
+import logo from '../piggybank.png';
 import '../App.css';
 
 import store from "../store";
