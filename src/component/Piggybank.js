@@ -15,18 +15,22 @@ const Piggybank = () => {
         navigate(-1); // new line
     };
     return (
-        <div className="App">
+      <div className="App">
         <header className="App-header">
+        {/* body */}
+        
           <p>
             Bienvenue sur la page <strong>Piggy Bank</strong>
           </p>
+
           <hr/>
-          <>
-            <button onClick={handleGoBack}>Go Back</button>
-          </>
+
+          <button className="Piggybank-buttonBack" onClick={handleGoBack}>Go Back</button>
           <Provider store={store}>
             {/* <Cart />*/}
           </Provider>
+
+        {/* end body */}
         </header>
       </div>
     );

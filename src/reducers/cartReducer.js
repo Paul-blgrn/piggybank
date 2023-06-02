@@ -1,4 +1,4 @@
-import { ADD_ITEM, DELETE_ITEM } from "../actionTypes/actionTypes";
+import { ADD_ITEM, DELETE_ITEM, RESET_ITEM } from "../actionTypes/actionTypes";
 import produce from "immer";
 
 const initialState = {
@@ -15,6 +15,10 @@ export const cartReducer = produce((draft = initialState, action) => {
     }
     case DELETE_ITEM: {
       draft.numOfItems--;
+      break;
+    }
+    case RESET_ITEM: {
+      draft.numOfItems = 0;
       break;
     }
     default: {

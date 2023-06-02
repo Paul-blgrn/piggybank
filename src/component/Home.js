@@ -8,7 +8,7 @@ import store from "../store";
 
 import { Provider } from "react-redux";
 
-//import Cart from "./component/Cart";
+import Cart from "../component/Cart";
 
 const Home = () => {
 
@@ -23,7 +23,7 @@ const Home = () => {
             Cliquez sur le cochon pour accéder à <strong>Piggy Bank</strong>
           </p>
           <Provider store={store}>
-            {/* <Cart />*/}
+            <Cart />
           </Provider>
         </header>
       </div>

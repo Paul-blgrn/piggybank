@@ -1,3 +1,7 @@
+/* -------------- */
+/* - Base React - */
+/* -------------- */
+
 .App {
   text-align: center;
 }
@@ -52,20 +56,84 @@ button {
   border: 0px;
   cursor: pointer;
 }
-.green {
-  background-color: rgb(6, 172, 0);
-}
-.red {
-  background-color: rgb(221, 52, 66);
-}
-.red:disabled {
-  background-color: rgb(193, 191, 191);
-  cursor: not-allowed;
-}
-.cart {
-  text-align: center;
-}
 
 hr {
   width: 40rem;
+}
+
+/* ------------------ */
+/* - Cookie Clicker - */
+/* ------------------ */
+
+.cart {
+  text-align: center;
+  margin-top: -3rem;
+}
+
+.cart-green {
+  background-color: rgb(6, 172, 0);
+}
+.cart-red {
+  background-color: rgb(221, 52, 66);
+  border-radius: 1rem;
+}
+.cart-red:disabled {
+  background-color: rgb(193, 191, 191);
+  cursor: not-allowed;
+}
+
+.cookie-img {
+  height: 30vmin;
+}
+
+.cookie-clicker {
+  position: relative;
+  margin-top: -2rem;
+}
+
+.cookie-clicker-counter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30vmin;
+  width: 30vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bolder;
+  user-select: none;
+}
+
+.shake {
+  height: 30vmin;
+  animation: shake 0.2s infinite;
+}
+
+@keyframes shake {
+0%  { transform: translate(2px, 1px)   rotate(0deg);  }
+10% { transform: translate(-1px, -2px) rotate(-2deg); }
+20% { transform: translate(-3px, 0px)  rotate(3deg);  }
+30% { transform: translate(0px, 2px)   rotate(0deg);  }
+40% { transform: translate(1px, -1px)  rotate(1deg);  }
+50% { transform: translate(-1px, 2px)  rotate(-1deg); }
+60% { transform: translate(-3px, 1px)  rotate(0deg);  }
+70% { transform: translate(2px, 1px)   rotate(-2deg); }
+80% { transform: translate(-1px, -1px) rotate(4deg);  }
+90% { transform: translate(2px, 2px)   rotate(0deg);  }
+100%{ transform: translate(1px, -2px)  rotate(-1deg); }
+}
+
+/* ------------------ */
+/* - PiggyBank Page - */
+/* ------------------ */
+
+.Piggybank-buttonBack {
+  background-color: #6d7585;
+  transition: all 0.3s ease-in-out;
+}
+
+.Piggybank-buttonBack:hover {
+  background-color: #fff;
+  color: #282c34;
 }
