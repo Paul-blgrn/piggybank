@@ -8,7 +8,7 @@ import store from "../store";
 
 import { Provider } from "react-redux";
 
-import Cart from "../component/Cart";
+import Cart from "./CookieClicker";
 
 const Home = () => {
 

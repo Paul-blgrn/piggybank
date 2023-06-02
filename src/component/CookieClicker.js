@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useEffect }  from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { addItem, deleteItem, resetItem } from "../actions/cartAction";
+import { addItem, deleteItem, resetItem } from "../actions/CookieClickerAction";
 
 import cookie from '../cookie.png';
 
