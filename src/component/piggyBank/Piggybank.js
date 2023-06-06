@@ -1,10 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import '../App.css';
 
-import store from "../store";
-
+import store from "../../store/Store";
 import { Provider } from "react-redux";
+
+import './PiggyBank.css';
 
 //import Cart from "./component/Cart";
 

@@ -1,8 +1,9 @@
-import React, { useState, useCallback, useEffect }  from "react";
+import React, { useState }  from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { addItem, deleteItem, resetItem } from "../actions/CookieClickerAction";
+import { addItem, deleteItem, resetItem } from "../../actions/cookieClicker/CookieClickerAction";
 
-import cookie from '../cookie.png';
+import './CookieClicker.css';
+import cookie from './cookie.png';
 
 const CookieClicker = () => {
   const state = useSelector((state) => state);

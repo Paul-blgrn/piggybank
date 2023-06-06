@@ -1,4 +1,4 @@
-import { ADD_ITEM, DELETE_ITEM, RESET_ITEM } from "../actionTypes/actionTypes";
+import { ADD_ITEM, DELETE_ITEM, RESET_ITEM } from "../../actionTypes/cookieClicker/ActionTypes";
 
 const addItem = () => {
   return {

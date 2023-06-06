@@ -1,14 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import logo from '../piggybank.png';
-import '../App.css';
-
-import store from "../store";
-
+import store from "../../store/Store";
 import { Provider } from "react-redux";
 
-import CookieClicker from "./CookieClicker";
+import CookieClicker from "../cookieClicker/CookieClicker";
+
+import logo from './piggybank.png';
+import './Home.css';
 
 const Home = () => {
 

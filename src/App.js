@@ -1,9 +1,10 @@
 import React from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
-import "./App.css";
 
-import Home from './component/Home';
-import Piggybank from "./component/Piggybank";
+import Home from './component/homePage/Home';
+import Piggybank from "./component/piggyBank/Piggybank";
+
+import "./App.css";
 
 function App() {
   return (
