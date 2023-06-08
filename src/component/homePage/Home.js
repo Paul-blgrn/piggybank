@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import store from "../../store/Store";
@@ -10,7 +10,9 @@ import logo from './piggybank.png';
 import './Home.css';
 
 const Home = () => {
-
+    useEffect(() => {
+      document.title = 'Piggy Bank - Home';
+    }, []);
     return (
         <div className="App">
         <header className="App-header">

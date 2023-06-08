@@ -5,84 +5,107 @@
     width: 100%;
     text-align: center;
     margin-top: -3rem;
-  }
+}
   
-  .cookie p {
-    font-size: 1.7rem;
-  }
-  
-  .cookie-red:before {
-    content: "Remise à Zéro";
-    color: white;
-    font-weight: bold;
-  }
+.cookie p {
+  font-size: 1.7rem;
+}
 
-  .cookie-red {
-    background-color: rgb(221, 52, 66);
-    border-radius: 1rem;
-    cursor: pointer;
-  }
-  .cookie-red:disabled {
-    visibility: hidden;
-  }
+.cookie-red:before {
+  content: "Remise à Zéro";
+  color: white;
+  font-weight: bold;
+}
+
+.cookie-red {
+  background-color: rgb(221, 52, 66);
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.cookie-red:disabled {
+  visibility: hidden;
+}
+
+.cookie-img {
+  height: 30vmin;
+  width: 30vmin;
+}
+
+.cookie-clicker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: -2rem;
+}
   
-  .cookie-img {
-    height: 30vmin;
-    width: 30vmin;
-  }
+.cookie-clicker-counter {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vmin;
+  width: 30vmin;
+  font-weight: bolder;
+  user-select: none;
+}
   
-  .cookie-clicker {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: -2rem;
-  }
+.shake {
+  height: 30vmin;
+  animation: shake 0.3s infinite;
+}
   
-  .cookie-clicker-counter {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 30vmin;
-    width: 30vmin;
-    font-weight: bolder;
-    user-select: none;
-  }
+.shake-reverse {
+  height: 30vmin;
+  animation: shake-reverse 0.3s infinite;
+}
   
-  .shake {
-    height: 30vmin;
-    animation: shake 0.3s infinite;
-  }
+@keyframes shake {
+0%  { transform: translate(2px, 1px)   rotate(0deg);  }
+10% { transform: translate(-1px, -2px) rotate(-2deg); }
+20% { transform: translate(-3px, 0px)  rotate(3deg);  }
+30% { transform: translate(0px, 2px)   rotate(0deg);  }
+40% { transform: translate(1px, -1px)  rotate(1deg);  }
+50% { transform: translate(-1px, 2px)  rotate(-1deg); }
+60% { transform: translate(-3px, 1px)  rotate(0deg);  }
+70% { transform: translate(2px, 1px)   rotate(-2deg); }
+80% { transform: translate(-1px, -1px) rotate(4deg);  }
+90% { transform: translate(2px, 2px)   rotate(0deg);  }
+100%{ transform: translate(1px, -2px)  rotate(-1deg); }
+}
   
-  .shake-reverse {
-    height: 30vmin;
-    animation: shake-reverse 0.3s infinite;
+@keyframes shake-reverse {
+  from {
+    transform: scale(1);
+    transform-origin: center;
+    transform: rotate(35deg)
   }
-  
-  @keyframes shake {
-  0%  { transform: translate(2px, 1px)   rotate(0deg);  }
-  10% { transform: translate(-1px, -2px) rotate(-2deg); }
-  20% { transform: translate(-3px, 0px)  rotate(3deg);  }
-  30% { transform: translate(0px, 2px)   rotate(0deg);  }
-  40% { transform: translate(1px, -1px)  rotate(1deg);  }
-  50% { transform: translate(-1px, 2px)  rotate(-1deg); }
-  60% { transform: translate(-3px, 1px)  rotate(0deg);  }
-  70% { transform: translate(2px, 1px)   rotate(-2deg); }
-  80% { transform: translate(-1px, -1px) rotate(4deg);  }
-  90% { transform: translate(2px, 2px)   rotate(0deg);  }
-  100%{ transform: translate(1px, -2px)  rotate(-1deg); }
+  to {
+    transform: scale(0.1);
+    transform-origin: center;
+    transform: rotate(10deg)
   }
-  
-  @keyframes shake-reverse {
-    from {
-      transform: scale(1);
-      transform-origin: center;
-      transform: rotate(35deg)
-    }
-    to {
-      transform: scale(0.1);
-      transform-origin: center;
-      transform: rotate(10deg)
-    }
-  }
+}
+
+.cookie-base {
+  color: rgb(255, 255, 255);
+  transition: all 0.3s ease-in-out;
+}
+
+.cookie-13 {
+  color: #6d0000;
+  text-shadow: 1px 1px 2px #000000, 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgb(83, 83, 83);
+  transition: all 0.3s ease-in-out;
+}
+
+.cookie-100 {
+  color: #32bb4f;
+  text-shadow: 1px 1px 2px #4b4b4b, 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgb(0, 0, 0);
+  transition: all 0.3s ease-in-out;
+}
+
+.cookie-200 {
+  color: blue;
+  text-shadow: 1px 1px 2px #4b4b4b, 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgb(0, 0, 0);
+  transition: all 0.3s ease-in-out;
+}

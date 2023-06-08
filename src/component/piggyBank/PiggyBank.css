@@ -2,12 +2,40 @@
 /* - PiggyBank Page - */
 /* ------------------ */
 
-.Piggybank-buttonBack {
-    background-color: #6d7585;
-    transition: all 0.3s ease-in-out;
-  }
+.Piggybank-buttonApp {
+  background: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+  color: #282c34;
+  font-weight: bold;
+  border-radius: 10px;
   
-  .Piggybank-buttonBack:hover {
-    background-color: #fff;
-    color: #282c34;
-  }
+  transition: all 0.3s ease-in-out;
+  transform: scale(1);
+}
+
+.Piggybank-buttonApp:hover {
+  background: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%);
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+.Piggybank-buttonBack {
+  background-color: #6d7585;
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+  border-radius: 10px;
+  transform: scale(1);
+}
+  
+.Piggybank-buttonBack:hover {
+  background-color: #fff;
+  color: #282c34;
+  font-weight: bold;
+  transform: scale(1.1);
+}
+
+.Piggy-Container{
+    width: 90%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+}

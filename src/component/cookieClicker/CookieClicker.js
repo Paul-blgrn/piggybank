@@ -60,7 +60,9 @@ const CookieClicker = () => {
             rightClickCookie();
           }}
         >
-          {state.numOfItems}
+          <div className={state.numOfItems === 13 ? `cookie-13` : state.numOfItems >= 100 ? `cookie-100` : `cookie-base` }>
+            {state.numOfItems}
+          </div>
         </div>
       </div>
 
