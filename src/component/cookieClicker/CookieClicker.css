@@ -44,7 +44,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     height: 30vmin;
     width: 30vmin;
     font-weight: bolder;
@@ -53,12 +52,12 @@
   
   .shake {
     height: 30vmin;
-    animation: shake 0.2s infinite;
+    animation: shake 0.3s infinite;
   }
   
   .shake-reverse {
     height: 30vmin;
-    animation: shake-reverse 0.2s infinite;
+    animation: shake-reverse 0.3s infinite;
   }
   
   @keyframes shake {
@@ -78,8 +77,12 @@
   @keyframes shake-reverse {
     from {
       transform: scale(1);
+      transform-origin: center;
+      transform: rotate(35deg)
     }
     to {
       transform: scale(0.1);
+      transform-origin: center;
+      transform: rotate(10deg)
     }
   }
