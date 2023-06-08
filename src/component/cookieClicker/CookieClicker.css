@@ -1,25 +1,29 @@
 /* ------------------ */
 /* - Cookie Clicker - */
 /* ------------------ */
-.cart {
+.cookie {
+    width: 100%;
     text-align: center;
     margin-top: -3rem;
   }
   
-  .cart p {
+  .cookie p {
     font-size: 1.7rem;
   }
   
-  .cart-green {
-    background-color: rgb(6, 172, 0);
+  .cookie-red:before {
+    content: "Remise à Zéro";
+    color: white;
+    font-weight: bold;
   }
-  .cart-red {
+
+  .cookie-red {
     background-color: rgb(221, 52, 66);
     border-radius: 1rem;
+    cursor: pointer;
   }
-  .cart-red:disabled {
-    background-color: rgb(193, 191, 191);
-    cursor: not-allowed;
+  .cookie-red:disabled {
+    visibility: hidden;
   }
   
   .cookie-img {
@@ -28,19 +32,21 @@
   }
   
   .cookie-clicker {
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     margin-top: -2rem;
   }
   
   .cookie-clicker-counter {
     position: absolute;
-    top: 0;
-    left: 0;
-    height: 30vmin;
-    width: 42.8vmin;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
+    height: 30vmin;
+    width: 30vmin;
     font-weight: bolder;
     user-select: none;
   }

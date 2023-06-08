@@ -36,7 +36,7 @@ const CookieClicker = () => {
   }
 
   return (
-    <div className="cart">
+    <div className="cookie">
 
     <p>
       Ou <br/>Cliquez sur ce magnifique <strong>Cookie</strong>
@@ -65,13 +65,12 @@ const CookieClicker = () => {
       </div>
 
       {/* RESET BUTTON */}
-      <button className="cart-red"
+      <button className="cookie-red"
         disabled={state.numOfItems > 0 ? false : true}
         onClick={() => {
           dispatch(resetItem());
         }}
       >
-        Remise à zéro
       </button>
     </div>
   );
