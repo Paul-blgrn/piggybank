@@ -39,3 +39,58 @@
     display: flex;
     flex-direction: column;
 }
+
+.piggy-head {
+  visibility: visible;
+}
+
+.piggy-content {
+  visibility: hidden;
+}
+
+.section-table {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+#sum {
+  border-radius: 10px;
+  background-color: #6d7585;
+}
+
+#div {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+.btn {
+  width: 250px;
+  margin-top: 30px;
+}
+
+.table-piggy{
+  border: 1px solid blueviolet;
+  padding: 5px;
+}
+
+.table-piggy th, td {
+  border: 1px solid white;
+  padding: 20px;
+}
+
+.trashicon {
+  color: #aa2121;
+  font-size:x-large;
+  margin-top: 15px;
+  padding: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.trashicon:hover {
+  color: #f81a1a;
+  font-size:x-large;
+  cursor: pointer;
+}
