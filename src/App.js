@@ -12,17 +12,21 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
 
+import { CustomProvider } from "./providers/CustomProvider";
+
 // Library Creation for fontAwesome
 library.add(fab, fas, far);
 config.autoAddCss = true;
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path='piggybank' element={<Piggybank />} />
-      <Route path='*' element={<Navigate to='/' />} />
-    </Routes>
+    <CustomProvider>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path='piggybank' element={<Piggybank />} />
+        <Route path='*' element={<Navigate to='/' />} />
+      </Routes>
+    </CustomProvider>
   );
 }
  

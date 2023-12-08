@@ -18,6 +18,14 @@
   transform: scale(1.1);
 }
 
+.flexButtons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .Piggybank-buttonBack {
   background-color: #6d7585;
   transition: all 0.3s ease-in-out;
@@ -41,11 +49,13 @@
 }
 
 .piggy-head {
-  visibility: visible;
+  position: absolute;
+  top: 0;
 }
 
 .piggy-content {
-  visibility: hidden;
+  position: absolute;
+  top: 0;
 }
 
 .section-table {
@@ -72,7 +82,6 @@
 }
 
 .table-piggy{
-  border: 1px solid blueviolet;
   padding: 5px;
 }
 
@@ -93,4 +102,30 @@
   color: #f81a1a;
   font-size:x-large;
   cursor: pointer;
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+  transition: opacity 1s linear, display 2s;
+}
+
+.hidden {
+  visibility: collapse;
+  opacity: 0;
+  z-index: -1;
+  transition: visibility 0s 1s, opacity 1s linear, display 2s;
+}
+
+
+.newLineForm {
+  min-width: 400px;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
 }
