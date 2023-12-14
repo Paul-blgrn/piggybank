@@ -8,7 +8,6 @@ import { formatPrice } from "../../../utils/maths"
 export default function PiggyTable() {
     const { item, setItem } = useContext(PiggyBankContext);
     
-
     const purgeTable = () => {
         // delete all elements inside tbody
         setItem([...item.filter((itemList) => itemList.id === null )])
@@ -35,7 +34,7 @@ export default function PiggyTable() {
                 {
                 item.map(({ id, name, desc, price, quantity }, index) => {
                     return (
-                        <tr key={id}>
+                        <tr key={index}>
                             <td>{name}</td>
                             <td>{desc}</td>
                             <td className="price">{ formatPrice(price) }</td>
