@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import { useState } from "react";
-import PiggyBankContext from "../../context/PiggyBankContext";
+import PiggyBankContext from "../../../context/PiggyBankContext";
 import styled from "styled-components";
-import { theme } from "../../theme/index"
-import './PiggyBank.css';
+import { theme } from "../../../theme/index"
+import '../PiggyBank.css'
 
 export default function CreationForm({show}) {
     const [ name, setName ] = useState("")

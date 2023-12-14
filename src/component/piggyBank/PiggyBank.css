@@ -108,14 +108,14 @@
   visibility: visible;
   opacity: 1;
   z-index: 1;
-  transition: opacity 1s linear, display 2s;
+  transition: opacity .5s linear, display .5s;
 }
 
 .hidden {
   visibility: collapse;
   opacity: 0;
   z-index: -1;
-  transition: visibility 0s 1s, opacity 1s linear, display 2s;
+  transition: visibility .5s, opacity .5s linear, display .5s;
 }
 
 @keyframes test {

@@ -1,12 +1,13 @@
-import { useContext } from "react";
-import PiggyBankContext from "../../context/PiggyBankContext";
-import { useEffect } from "react";
-import { counterPrice } from "../../utils/counterPrice";
-import { useState } from "react";
+import { useContext, useEffect } from "react";
+import PiggyBankContext from "../../../context/PiggyBankContext";
+import TotalPriceContext from "../../../context/TotalPriceContext";
+import { counterPrice } from "../../../utils/counterPrice";
+
+import '../PiggyBank.css'
 
 export default function TotalPrice() {
     const { item, setItem } = useContext(PiggyBankContext);
-    const [ totalPrice, setTotalPrice ] = useState(0)
+    const { totalPrice, setTotalPrice } = useContext(TotalPriceContext)
 
     useEffect(() => {
         const prices = []
@@ -24,7 +25,7 @@ export default function TotalPrice() {
         const totalPrices = counterPrice(prices)
         setTotalPrice(totalPrices)
         //console.log(totalPrices)
-    }, [item, setItem])
+    }, [item, setItem, setTotalPrice])
 
   return (
     <div id="sum">
