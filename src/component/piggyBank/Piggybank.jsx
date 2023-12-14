@@ -18,7 +18,7 @@ export default function Piggybank() {
     const [ showForm, setShowForm ] = useState(false);
     const [ showCreationForm, setShowCreationForm ] = useState(false);
     const { item, setItem } = useContext(PiggyBankContext);
-    const { totalPrice, setTotalPrice } = useContext(TotalPriceContext)
+    const { totalPrice } = useContext(TotalPriceContext)
 
     // navigation to return back
     const navigate = useNavigate();
@@ -62,7 +62,19 @@ export default function Piggybank() {
     };
 
     const creationForm = () => {
+      const appForm = document.getElementById('creationForm')
 
+      if (!showCreationForm) {
+
+        appForm.classList.remove('hiddenform')
+        appForm.classList.add('visibleform')
+
+      } else {
+
+        appForm.classList.add('hiddenform')
+        appForm.classList.remove('visibleform')
+
+      }
       setShowCreationForm(!showCreationForm)
     }
 
@@ -82,7 +94,7 @@ export default function Piggybank() {
         {/* body */}
 
         {/* DIV ID piggy-home */}
-        <div id="piggy-head" className="piggy-head visible">
+        <div id="piggy-head" className="piggy-head hidden">
           <div className="Piggy-Container">
             <h1 id="Piggy-main-title">My Piggy Bank</h1>
           </div>
@@ -103,7 +115,7 @@ export default function Piggybank() {
         </div>
 
         {/* DIV ID piggy-content */}
-        <div id="piggy-content" className="piggy-content hidden">
+        <div id="piggy-content" className="piggy-content visible">
           <h1>My piggy bank</h1>
 
           <hr />

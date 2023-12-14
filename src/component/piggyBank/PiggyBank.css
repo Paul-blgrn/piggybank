@@ -118,14 +118,28 @@
   transition: visibility 0s 1s, opacity 1s linear, display 2s;
 }
 
+@keyframes test {
+  from {
+    position: relative;
+    top: 30px;
+  }
+  to {
+    position: absolute;
+  } 
+}
 
-.newLineForm {
-  min-width: 400px;
-  max-width: 500px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid red;
+.visibleform {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity .5s linear;
+  position: relative;
+  top: 30px;
+}
+
+.hiddenform {
+  visibility: collapse;
+  opacity: 0;
+  transition: visibility 0s 0.5s, opacity 0.5s linear;
+  animation: test 1.9s;
+  animation-fill-mode: forwards;
 }
