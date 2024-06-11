@@ -7,6 +7,7 @@ const colors = {
     primary: "#67b6b9",
     primary_logo: "#3f7f8e",
     green: "green",
+    limegreen:"#32CD32",
     red: "#e25549",
     redSecondary: "#c4151c",
     blue: "#51a7e1",

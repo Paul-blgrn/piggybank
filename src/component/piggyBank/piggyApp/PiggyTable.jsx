@@ -25,6 +25,7 @@ export default function PiggyTable() {
                     <th scope="col">Nom</th>
                     <th scope="col">Description</th>
                     <th scope="col">Prix</th>
+                    <th scope="col">Type</th>
                     <th scope="col">Quantité</th>
                     <th scope="col"><FontAwesomeIcon onClick={purgeTable} className="trashicon" icon={["fas", "fa-gear"]} /></th>
                 </tr>
@@ -32,12 +33,13 @@ export default function PiggyTable() {
 
             <tbody>
                 {
-                item.map(({ id, name, desc, price, quantity }, index) => {
+                item.map(({ id, name, desc, price, type, quantity }, index) => {
                     return (
                         <tr key={index}>
                             <td>{name}</td>
                             <td>{desc}</td>
                             <td className="price">{ formatPrice(price) }</td>
+                            <td>{type}</td>
                             <td>{quantity}</td>
                             <td>
                                 <FontAwesomeIcon 

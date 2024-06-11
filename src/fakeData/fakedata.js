@@ -4,6 +4,7 @@ export const fakeItems = [
         name: "Salaire", 
         desc: "Entreprise", 
         price: 1600,
+        type: "Revenu",
         quantity: 1,
     },
     {
@@ -11,6 +12,7 @@ export const fakeItems = [
         name: "Transport", 
         desc: "Abonnement mensuel", 
         price: -50,
+        type: "Dépense",
         quantity: 1,
     },
     {
@@ -18,6 +20,7 @@ export const fakeItems = [
         name: "Restaurant", 
         desc: "Burger King", 
         price: -30,
+        type: "Dépense",
         quantity: 1,
     },
 ]
