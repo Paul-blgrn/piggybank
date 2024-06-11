@@ -53,13 +53,13 @@ export default function CreationForm({show}) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const formattedPrice = type === "dépense" ? -Math.abs(parseFloat(price)) : Math.abs(parseFloat(price));
+        const formattedPrice = type && type.value === "dépense" ? -Math.abs(parseFloat(price)) : Math.abs(parseFloat(price));
         const newLine = {
             id: item.length +1,
             name: name,
             desc: desc,
             price: formattedPrice,
-            type: type.value,
+            type: type ? type.value : "",
             quantity: quantity || 1,
         }
         setItem([...item, newLine])
@@ -85,9 +85,11 @@ export default function CreationForm({show}) {
             <div className="customdiv">
                 <label>Type: </label>
                 <StyledSelect  
+                    required
+                    defaultValue={options[0]}
                     value={type} 
                     onChange={handleChangeType} 
-                    options={options} 
+                    options={options}
                     placeholder="Sélectionnez un type"
                 />
             </div>
