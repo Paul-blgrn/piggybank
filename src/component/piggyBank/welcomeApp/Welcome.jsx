@@ -19,9 +19,9 @@ export default function Welcome() {
     }
 
     return (
-        <div id="piggy-head" className="piggy-head visible">
+        <div id="piggy-head" className="piggy-head hidden">
             <div className="Piggy-Container">
-                <h1 id="Piggy-main-title">My Piggy Bank</h1>
+                <h1 id="Piggy-main-title">Mon Budget</h1>
             </div>
         
             <p>

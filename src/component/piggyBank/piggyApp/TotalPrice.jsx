@@ -3,6 +3,8 @@ import PiggyBankContext from "../../../context/PiggyBankContext";
 import TotalPriceContext from "../../../context/TotalPriceContext";
 import { counterPrice } from "../../../utils/counterPrice";
 
+import styled from "styled-components";
+import { theme } from "../../../theme/index"
 import '../PiggyBank.css'
 
 export default function TotalPrice() {
@@ -28,8 +30,21 @@ export default function TotalPrice() {
     }, [item, setItem, setTotalPrice])
 
   return (
-    <div id="sum">
-        <p>Le prix total est de {totalPrice}</p>
-    </div>
+    <ResultDivStyled id="sum">
+        <p className="totalresult">La somme restante est de <span>{totalPrice}</span></p>
+    </ResultDivStyled>
   )
 }
+
+const ResultDivStyled = styled.div`
+    width: 60vw;
+    margin: 0 auto;
+
+    .totalresult {
+      margin: 0;
+      padding: 10px;
+      color: ${theme.colors.white};
+      font-weight: bold;
+    }
+
+`;

@@ -10,7 +10,7 @@ export default function Piggybank() {
 
     // change page title here
     useEffect(() => {
-      document.title = 'Piggy Bank - PiggyBank';
+      document.title = 'Calcul de budget';
     }, []);
 
     return (

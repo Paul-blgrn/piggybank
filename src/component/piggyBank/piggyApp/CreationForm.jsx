@@ -105,61 +105,23 @@ export default function CreationForm({show}) {
     )
 }
 
-const StyledSelect = styled(Select)`
-    width: 200px;
-    padding: 0;
-    margin: 0 auto;
-    color: ${theme.colors.dark};
-    font-size: 15px;
-
-    .react-select__control {
-        background-color: white;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        padding: 8px;
-        padding-right: 32px; /* Ajouter un padding à droite pour laisser de l'espace pour la flèche */
-        font-size: 14px;
-        color: #333;
-        outline: none;
-        position: relative; /* Position relative pour le positionnement absolu de la flèche */
-    }
-    .react-select__menu {
-        margin-top: 2px;
-        border-radius: 4px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .react-select__option {
-        padding: 8px;
-        color: #333;
-    }
-
-    .react-select__option--is-selected {
-        background-color: #007bff;
-        color: white;
-    }
-
-    .react-select__option--is-focused {
-        background-color: #007bff;
-        color: white;
-    }
-
-    .react-select__single-value {
-        color: #333;
-    }
-`;
-
 const PiggyFormStyled = styled.form`
-    min-width: 400px;
-    max-width: 500px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    z-index: 10;
     text-align: left;
+
     padding: 20px 15px;
     margin: 0 auto;
-    background-color: ${theme.colors.greyMedium};
+
+    position: relative;
+    top: 15vh;
+
+    background-color: ${theme.colors.greyBlue};
     border-radius: ${theme.borderRadius.round};
 
     .customdiv {
@@ -222,5 +184,49 @@ const PiggyFormStyled = styled.form`
     button:disabled {
         opacity: 0.6;
         cursor: not-allowed;
+    }
+`;
+
+const StyledSelect = styled(Select)`
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    color: ${theme.colors.dark};
+    font-size: 15px;
+
+    .react-select__control {
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 8px;
+        padding-right: 32px; /* Ajouter un padding à droite pour laisser de l'espace pour la flèche */
+        font-size: 14px;
+        color: #333;
+        outline: none;
+        position: relative; /* Position relative pour le positionnement absolu de la flèche */
+    }
+    .react-select__menu {
+        margin-top: 2px;
+        border-radius: 4px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .react-select__option {
+        padding: 8px;
+        color: #333;
+    }
+
+    .react-select__option--is-selected {
+        background-color: #007bff;
+        color: white;
+    }
+
+    .react-select__option--is-focused {
+        background-color: #007bff;
+        color: white;
+    }
+
+    .react-select__single-value {
+        color: #333;
     }
 `;

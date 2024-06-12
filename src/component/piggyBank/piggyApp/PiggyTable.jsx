@@ -5,6 +5,10 @@ import { useContext } from 'react';
 import PiggyBankContext from '../../../context/PiggyBankContext';
 import { formatPrice } from "../../../utils/maths"
 
+import styled from "styled-components";
+import { theme } from "../../../theme/index"
+import '../PiggyBank.css'
+
 export default function PiggyTable() {
     const { item, setItem } = useContext(PiggyBankContext);
     
@@ -19,41 +23,104 @@ export default function PiggyTable() {
     };
 
     return (
-        <table className="table-piggy">
-            <thead>
-                <tr>
-                    <th scope="col">Nom</th>
-                    <th scope="col">Description</th>
-                    <th scope="col">Prix</th>
-                    <th scope="col">Type</th>
-                    <th scope="col">Quantité</th>
-                    <th scope="col"><FontAwesomeIcon onClick={purgeTable} className="trashicon" icon={["fas", "fa-gear"]} /></th>
-                </tr>
-            </thead>
+        <StyledTableWrapper>
+            <StyledTable className="table-piggy">
+                <thead>
+                    <tr>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Prix</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Quantité</th>
+                        <th scope="col"><FontAwesomeIcon onClick={purgeTable} className="trashicon" icon={["fas", "fa-gear"]} /></th>
+                    </tr>
+                </thead>
 
-            <tbody>
-                {
-                item.map(({ id, name, desc, price, type, quantity }, index) => {
-                    return (
-                        <tr key={index}>
-                            <td>{name}</td>
-                            <td>{desc}</td>
-                            <td className="price">{ formatPrice(price) }</td>
-                            <td>{type}</td>
-                            <td>{quantity}</td>
-                            <td>
-                                <FontAwesomeIcon 
-                                    onClick={() => removeRow(id)} 
-                                    className="trashicon" 
-                                    icon={["fas", "fa-trash"]} 
-                                />
-                            </td>
-                        </tr>
-                    )
-                })
-                }
+                <tbody className="budget-tbody">
+                    {
+                    item.map(({ id, name, desc, price, type, quantity }, index) => {
+                        return (
+                            <tr key={index}>
+                                <td>{name}</td>
+                                <td>{desc}</td>
+                                <td className="price">{ formatPrice(price) }</td>
+                                <td>{type}</td>
+                                <td>{quantity}</td>
+                                <td>
+                                    <FontAwesomeIcon 
+                                        onClick={() => removeRow(id)} 
+                                        className="trashicon" 
+                                        icon={["fas", "fa-trash"]} 
+                                    />
+                                </td>
+                            </tr>
+                        )
+                    })
+                    }
 
-            </tbody>
-        </table>
+                </tbody>
+            </StyledTable>
+        </StyledTableWrapper>
     )
 }
+
+const StyledTableWrapper = styled.div`
+    width: 65vw;
+    overflow-x: hidden;
+    margin: 0 auto;
+`;
+
+const StyledTable = styled.table`
+    border-collapse: collapse;
+    margin: 0 auto;
+    table-layout: fixed;
+    direction: rtl;
+
+    thead {
+        display: table;
+        table-layout: fixed;
+        width: calc(100% - 17px); /* Adjust width to account for scrollbar */
+        direction: ltr;
+    }
+
+    .scroll-container {
+        direction: ltr;
+    }
+
+    tbody {
+        display: block;
+        max-height: 500px; /* Adjust the max-height as needed */
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 100%;
+        direction: rtl;
+    }
+
+    th, td {
+        border: 1px solid white;
+        padding: 10px 20px;
+        width: 100%;
+    }
+
+    thead th {
+        background-color: ${theme.colors.greyBlue};
+        position: sticky;
+        top: 0;
+        z-index: 2;
+    }
+
+    .budget-tbody tr {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+        direction: ltr;
+    }
+
+    .budget-tbody tr:nth-child(odd) {
+        background-color: ${theme.colors.greyLight};
+    }
+
+    .budget-tbody tr:nth-child(even) {
+        background-color: ${theme.colors.greyMedium};
+    }
+`;
