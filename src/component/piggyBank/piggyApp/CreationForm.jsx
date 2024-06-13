@@ -68,7 +68,7 @@ export default function CreationForm({show}) {
 
     return (
         // className="hiddenform"
-        <PiggyFormStyled id="creationForm" className="" onSubmit={handleSubmit}>
+        <PiggyFormStyled id="creationForm" className="hiddenform" onSubmit={handleSubmit}>
             <div className="customdiv">
                 <label>Nom: </label>
                 <input value={name} onChange={handleChangeName} required type="text" placeholder="Nom"></input>
