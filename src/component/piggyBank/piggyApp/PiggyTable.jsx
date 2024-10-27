@@ -32,7 +32,7 @@ export default function PiggyTable() {
                         <th scope="col">Prix</th>
                         <th scope="col">Type</th>
                         <th scope="col">Quantité</th>
-                        <th scope="col"><FontAwesomeIcon onClick={purgeTable} className="trashicon" icon={["fas", "fa-gear"]} /></th>
+                        <th scope="col"><FontAwesomeIcon onClick={purgeTable} className="trashicon" icon={["fa", "fa-minus-square"]} /></th>
                     </tr>
                 </thead>
 
@@ -75,6 +75,7 @@ const StyledTable = styled.table`
     margin: 0 auto;
     table-layout: fixed;
     direction: rtl;
+    scrollbar-width: none;
 
     thead {
         display: table;
@@ -112,8 +113,16 @@ const StyledTable = styled.table`
     .budget-tbody tr {
         display: table;
         table-layout: fixed;
-        width: 100%;
+        width: calc(100% - 17px);
         direction: ltr;
+        font-size: 1.1vw;
+        color: black;
+        font-weight: bold;
+        scrollbar-width: none;
+    }
+
+    .budget-tbody::-webkit-scrollbar {
+        display: none;
     }
 
     .budget-tbody tr:nth-child(odd) {
