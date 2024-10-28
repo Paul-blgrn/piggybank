@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/piggybank/static/css/main.9d95720c.css",
-    "main.js": "/piggybank/static/js/main.c7bb4947.js",
+    "main.css": "/piggybank/static/css/main.841ddcc3.css",
+    "main.js": "/piggybank/static/js/main.fbc99edd.js",
     "static/js/787.4bbcfac3.chunk.js": "/piggybank/static/js/787.4bbcfac3.chunk.js",
     "static/media/cookie.png": "/piggybank/static/media/cookie.7e02f6198157cceda152.png",
     "static/media/piggybank.png": "/piggybank/static/media/piggybank.89a2d224966f467d528b.png",
     "index.html": "/piggybank/index.html",
-    "main.9d95720c.css.map": "/piggybank/static/css/main.9d95720c.css.map",
-    "main.c7bb4947.js.map": "/piggybank/static/js/main.c7bb4947.js.map",
+    "main.841ddcc3.css.map": "/piggybank/static/css/main.841ddcc3.css.map",
+    "main.fbc99edd.js.map": "/piggybank/static/js/main.fbc99edd.js.map",
     "787.4bbcfac3.chunk.js.map": "/piggybank/static/js/787.4bbcfac3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9d95720c.css",
-    "static/js/main.c7bb4947.js"
+    "static/css/main.841ddcc3.css",
+    "static/js/main.fbc99edd.js"
   ]
 }
