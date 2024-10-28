@@ -32,7 +32,7 @@ export default function PiggyTable() {
                         <th scope="col">Prix</th>
                         <th scope="col">Type</th>
                         <th scope="col">Quantité</th>
-                        <th scope="col"><FontAwesomeIcon onClick={purgeTable} className="trashicon" icon={["fa", "fa-minus-square"]} /></th>
+                        <th scope="col"><FontAwesomeIcon onClick={purgeTable} className="trashicon" icon={["fa", "fa-minus-square"]} title="Supprimer tout" /></th>
                     </tr>
                 </thead>
 
@@ -49,8 +49,9 @@ export default function PiggyTable() {
                                 <td>
                                     <FontAwesomeIcon 
                                         onClick={() => removeRow(id)} 
-                                        className="trashicon" 
+                                        className="trashicon-body" 
                                         icon={["fas", "fa-trash"]} 
+                                        title="Supprimer la ligne"
                                     />
                                 </td>
                             </tr>
@@ -65,9 +66,11 @@ export default function PiggyTable() {
 }
 
 const StyledTableWrapper = styled.div`
-    width: 65vw;
+    width: 100%;
+    max-width: 80vw;
     overflow-x: hidden;
     margin: 0 auto;
+    padding: 0 10px;
 `;
 
 const StyledTable = styled.table`
@@ -75,6 +78,8 @@ const StyledTable = styled.table`
     margin: 0 auto;
     table-layout: fixed;
     direction: rtl;
+    width: 100%;
+    max-width: 80vw;
     scrollbar-width: none;
 
     thead {
@@ -99,8 +104,9 @@ const StyledTable = styled.table`
 
     th, td {
         border: 1px solid white;
-        padding: 10px 20px;
+        padding: 10px 10px;
         width: 100%;
+        font-size: 1.5vw;
     }
 
     thead th {

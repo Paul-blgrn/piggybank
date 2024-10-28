@@ -68,7 +68,7 @@ export default function CreationForm({show}) {
 
     return (
         // className="hiddenform"
-        <PiggyFormStyled id="creationForm" className="hiddenform" onSubmit={handleSubmit}>
+        <PiggyFormStyled id="creationForm" className="" onSubmit={handleSubmit}>
             <div className="customdiv">
                 <label>Nom: </label>
                 <input value={name} onChange={handleChangeName} required type="text" placeholder="Nom"></input>
@@ -106,7 +106,8 @@ export default function CreationForm({show}) {
 }
 
 const PiggyFormStyled = styled.form`
-    width: 300px;
+    width: 100%;
+    max-width: 20vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -120,13 +121,14 @@ const PiggyFormStyled = styled.form`
 
     position: relative;
     top: 15vh;
+    right: 1vw;
 
     background-color: ${theme.colors.greyBlue};
     border-radius: ${theme.borderRadius.round};
 
     .customdiv {
-        min-width: 200px;
-        max-width: 300px;
+        min-width: 10vw;
+        max-width: 20vw;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -139,8 +141,8 @@ const PiggyFormStyled = styled.form`
     input {
         padding: 20px 15px;
         margin: 5px 0;
-        min-width: 150px;
-        max-width: 200px;
+        min-width: 10vw;
+        max-width: 20vw;
         background: white;
         border-radius: ${theme.borderRadius.round};
         border: none;
@@ -157,10 +159,11 @@ const PiggyFormStyled = styled.form`
         border: 1px solid green;
         border-radius: 5px;
         color: white;
-        font-size: 18px;
+        font-size: 1vw;
         font-weight: 800;
-        padding: 16px 24px;
+        padding: 16px 25px;
         width: 100%;
+        max-width: 20vw;
         justify-content: center;
         align-items: center;
         white-space: nowrap;

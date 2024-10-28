@@ -19,13 +19,13 @@ export default function Welcome() {
     }
 
     return (
-        <div id="piggy-head" className="piggy-head hidden">
+        <div id="piggy-head" className="piggy-head visible">
             <div className="Piggy-Container">
                 <h1 id="Piggy-main-title">Mon Budget</h1>
             </div>
         
             <p>
-                Bienvenue <strong>User</strong>
+                Bienvenue !
             </p>
 
             <hr/>

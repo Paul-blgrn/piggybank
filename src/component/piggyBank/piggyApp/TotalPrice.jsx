@@ -31,7 +31,7 @@ export default function TotalPrice() {
 
   return (
     <ResultDivStyled id="sum">
-        <p className="totalresult">La somme restante est de <span>{totalPrice}</span></p>
+        <p className="totalresult">La totale restante est de <span>{totalPrice}</span></p>
     </ResultDivStyled>
   )
 }

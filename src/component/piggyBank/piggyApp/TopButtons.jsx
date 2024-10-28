@@ -44,7 +44,6 @@ export default function Buttons() {
     }
   return (
     <div className="flexButtons">
-        <button className="Piggybank-buttonBack" onClick={handleGoBack}>Accueil</button>
         <button className="Piggybank-buttonBack" onClick={hideTable}>Fermer l'app</button>
         <button className="Piggybank-buttonBack" onClick={creationForm}>Ajouter un champ</button>
     </div>

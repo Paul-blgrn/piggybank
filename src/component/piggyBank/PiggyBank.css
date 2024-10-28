@@ -86,11 +86,26 @@
   color: #aa2121;
   font-size:x-large;
   margin-top: 15px;
-  padding: 20px;
+  padding: 10px 10px;
+  font-size: 1.5vw;
   transition: all 0.3s ease-in-out;
 }
 
 .trashicon:hover {
+  color: #f81a1a;
+  font-size:x-large;
+  cursor: pointer;
+}
+
+.trashicon-body {
+  color: #aa2121;
+  font-size:x-large;
+  font-size: 1.5vw;
+  padding: 10px 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.trashicon-body:hover {
   color: #f81a1a;
   font-size:x-large;
   cursor: pointer;

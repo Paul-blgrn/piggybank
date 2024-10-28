@@ -9,10 +9,10 @@ import '../PiggyBank.css'
 
 export default function PiggyApp() {
   return (
-    <BudgetDivStyled id="piggy-content" className="piggy-content">
+    <BudgetDivStyled id="piggy-content" className="piggy-content hidden">
       <div className="section-table">
         <div>
-          <h1>Bienvenue sur -nom- !</h1>
+          <h1>Bienvenue sur MyBudget !</h1>
           <p>Votre gestionnaire de budget</p>
         </div>
 
