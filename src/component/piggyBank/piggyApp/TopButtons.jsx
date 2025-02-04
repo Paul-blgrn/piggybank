@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState, useContext } from "react";
+import { useCallback, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
 import GlobalContext from "../../../context/GlobalContext";
@@ -28,23 +28,6 @@ export default function Buttons() {
       appBody.classList.remove('visible')
       appBody.classList.add('hidden')
     }
-
-    // const creationForm = () => {
-    //   const appForm = document.getElementById('creationForm')
-
-    //   if (!showCreationForm) {
-
-    //     appForm.classList.remove('hiddenform')
-    //     appForm.classList.add('visibleform')
-
-    //   } else {
-
-    //     appForm.classList.add('hiddenform')
-    //     appForm.classList.remove('visibleform')
-
-    //   }
-    //   setShowCreationForm(!showCreationForm)
-    // }
 
     const handleToggleCreationForm = useCallback(() =>{
       setShowCreationForm((prev) => !prev);
