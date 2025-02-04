@@ -1,12 +1,15 @@
-import { useState } from "react";
+import { useCallback, useEffect, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+
+import GlobalContext from "../../../context/GlobalContext";
 
 import '../PiggyBank.css'
 
 
 export default function Buttons() {
 
-    const [ showCreationForm, setShowCreationForm ] = useState(false);
+    const {showCreationForm, setShowCreationForm} = useContext(GlobalContext);
+    
 
     // navigation to return back
     const navigate = useNavigate();
@@ -26,26 +29,36 @@ export default function Buttons() {
       appBody.classList.add('hidden')
     }
 
-    const creationForm = () => {
-      const appForm = document.getElementById('creationForm')
+    // const creationForm = () => {
+    //   const appForm = document.getElementById('creationForm')
 
-      if (!showCreationForm) {
+    //   if (!showCreationForm) {
 
-        appForm.classList.remove('hiddenform')
-        appForm.classList.add('visibleform')
+    //     appForm.classList.remove('hiddenform')
+    //     appForm.classList.add('visibleform')
 
-      } else {
+    //   } else {
 
-        appForm.classList.add('hiddenform')
-        appForm.classList.remove('visibleform')
+    //     appForm.classList.add('hiddenform')
+    //     appForm.classList.remove('visibleform')
 
-      }
-      setShowCreationForm(!showCreationForm)
-    }
+    //   }
+    //   setShowCreationForm(!showCreationForm)
+    // }
+
+    const handleToggleCreationForm = useCallback(() =>{
+      setShowCreationForm((prev) => !prev);
+    }, [showCreationForm]);
+
+    useEffect(() => {
+      console.log("Nouvelle valeur de showCreationForm :", showCreationForm);
+    }, [showCreationForm]);
+
+
   return (
     <div className="flexButtons">
         <button className="Piggybank-buttonBack" onClick={hideTable}>Fermer l'app</button>
-        <button className="Piggybank-buttonBack" onClick={creationForm}>Ajouter un champ</button>
+        <button className="Piggybank-buttonBack" onClick={handleToggleCreationForm}>Ajouter un champ</button>
     </div>
   )
 }

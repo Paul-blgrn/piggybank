@@ -3,7 +3,7 @@ import { useState } from "react";
 import Select from 'react-select';
 
 import PiggyBankContext from "../../../context/PiggyBankContext";
-
+import GlobalContext from "../../../context/GlobalContext";
 
 import styled from "styled-components";
 import { theme } from "../../../theme/index"
@@ -20,6 +20,8 @@ export default function CreationForm({show}) {
     const [ price, setPrice ] = useState("")
     const [ quantity, setQuantity ] = useState("")
     const [type, setType] = useState(null);
+
+    const {showCreationForm, setShowCreationForm} = useContext(GlobalContext);
 
     const { item, setItem } = useContext(PiggyBankContext)
 
@@ -68,15 +70,15 @@ export default function CreationForm({show}) {
 
     return (
         // className="hiddenform"
-        <PiggyFormStyled id="creationForm" className="" onSubmit={handleSubmit}>
+        <PiggyFormStyled id="creationForm" className={showCreationForm ? "visibleform" : "hiddenform"} onSubmit={handleSubmit}>
             <div className="customdiv">
                 <label>Nom: </label>
-                <input value={name} onChange={handleChangeName} required type="text" placeholder="Nom"></input>
+                <input value={name} onChange={handleChangeName} required type="text" placeholder="Nom" maxLength={25}></input>
             </div>
 
             <div className="customdiv">
                 <label>Description: </label>
-                <input value={desc} onChange={handleChangeDesc} type="text" placeholder="Description"></input>
+                <input value={desc} onChange={handleChangeDesc} type="text" placeholder="Description" maxLength={25}></input>
             </div>
             <div className="customdiv">
                 <label>Prix: </label>
@@ -110,25 +112,20 @@ const PiggyFormStyled = styled.form`
     max-width: 20vw;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-
-    z-index: 10;
     text-align: left;
-
+    z-index: 10;
     padding: 20px 15px;
     margin: 0 auto;
-
-    position: relative;
-    top: 15vh;
-    right: 1vw;
 
     background-color: ${theme.colors.greyBlue};
     border-radius: ${theme.borderRadius.round};
 
     .customdiv {
-        min-width: 10vw;
-        max-width: 20vw;
+        width: 100%;
+
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -192,6 +189,7 @@ const PiggyFormStyled = styled.form`
 
 const StyledSelect = styled(Select)`
     width: 100%;
+    max-width: 20vw;
     padding: 0;
     margin: 0 auto;
     color: ${theme.colors.dark};

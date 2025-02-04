@@ -9,7 +9,7 @@ import '../PiggyBank.css'
 
 export default function PiggyApp() {
   return (
-    <BudgetDivStyled id="piggy-content" className="piggy-content hidden">
+    <BudgetDivStyled id="piggy-content" className="piggy-content visible">
       <div className="section-table">
         <div>
           <h1>Bienvenue sur MyBudget !</h1>
@@ -26,13 +26,12 @@ export default function PiggyApp() {
 
         <hr />
 
-        <PiggyTable />
-
+        <PiggyBankStyled>
+          <PiggyTable />
+          <CreationForm />
+        </PiggyBankStyled>
+          
         <hr />
-      </div>
-
-      <div>
-        <CreationForm />
       </div>
     </BudgetDivStyled>
   )
@@ -54,4 +53,11 @@ const BudgetDivStyled = styled.div`
     padding: 0;
     color: ${theme.colors.greyMedium};
   }
+`;
+
+const PiggyBankStyled = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 `;
